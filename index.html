@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+	<title>Display date</title>
+	<script>
+		var interval = 1000
+		var interval2 = 3
+		var counters = 0
+		var counterm = 00
+		var counter = ''
+		var counterem = ''
+		var counterem2 = ''
+		var x = true
+		var y = false
+		var iner = ''
+		var iner2 = ''
+		var iner3 = ''
+		function onload() {
+			interval2 = document.getElementById('inputUser').value;
+		}
+
+		function displayDate() {
+			iner2 = 'aditional information:  '+Date();
+			iner3 = iner2.substring(40,)
+			iner3 = iner3.substring(0,8) 
+			iner2 = 'aditional information:  '+iner3 
+			document.getElementById('date2').innerHTML = iner2;
+			if (x == true){
+				counters ++
+			}
+			if (counters >= 60 && x == true) {
+				counters = 0
+				counterm ++
+			}
+			if(counters <= 9){counterem2 = '0'+counters}
+			if(counterm <= 9){counterem = '0'+counterm}
+			if(counters >= 10){counterem2 = counters}
+			if(counterm >= 10){counterem = counterm}
+			counter = counterem+':'+counterem2
+			document.getElementById("showDate").innerHTML = counter;
+			document.getElementById("h").innerHTML = 'Button Clicked';
+			if(y==false){document.getElementById('h2').innerHTML = 'Stop';y=true}
+		}
+		function dis2() {
+			if (x==true){
+				x = false
+				document.getElementById('h2').innerHTML = 'Start'
+			}else{x=true;document.getElementById('h2').innerHTML = 'Stop'}
+		}
+		function h() {
+			interval2 = document.getElementById("inputUser").value;
+			setInterval(displayDate,(-(interval2*10)+1000)+10);
+		}
+	</script>
+</head>
+<body onload='onload();'>
+	<form action="juego.html">
+	<button type='button' onclick='h()'>Click To Start</button>
+	<button type='button' onclick='dis2()' id='h2'>Start</button>
+	<script>	
+	</script>
+	<p id="h">Waiting for Click</p>
+	<h3 id="showDate">00:00</h3>
+		<p>Speed :</p>
+		<input id='inputUser' type='text' value='1'/><br><br><br>
+	<button type='Submit'>Restart</button>
+	<br><br><br><br><br><br>
+	<p id='date2'>aditional information: </p>
+	</form>
+</body>
+</html>
