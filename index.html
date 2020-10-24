@@ -21,11 +21,6 @@
 		}
 
 		function displayDate() {
-			iner2 = 'aditional information:  '+Date();
-			iner3 = iner2.substring(40,)
-			iner3 = iner3.substring(0,8) 
-			iner2 = 'aditional information:  '+iner3 
-			document.getElementById('date2').innerHTML = iner2;
 			if (x == true){
 				counters ++
 			}
@@ -52,21 +47,25 @@
 			interval2 = document.getElementById("inputUser").value;
 			setInterval(displayDate,(-(interval2*10)+1000)+10);
 		}
+		function other() {
+			iner2 = 'aditional information:  '+Date();
+			iner3 = iner2.substring(40,)
+			iner3 = iner3.substring(0,8) 
+			iner2 = 'aditional information:  '+iner3 
+			document.getElementById('date2').innerHTML = iner2;
+		}
 	</script>
 	<style>
-		.disi {
-			border: 5px outset red;
-  			background-color: lightblue;    
+		.disi {    
   			text-align: center
 		}
 	</style>
 	<style>
 		.disi2 {
-			border: 5px outset red;
-  			background-color: lightblue;    
   			text-align: center
 		}
 	</style>
+	setInterval(other,1000)
 </head>
 <body onload='onload();'>
 	<form action="juego.html">
