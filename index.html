@@ -54,7 +54,7 @@
 			iner2 = iner3 
 			document.getElementById('date2').innerHTML = iner2;
 		}
-		setInterval(other,1000)
+		setInterval(other,0)
 	</script>
 	<style>
 		.disi {    
@@ -69,6 +69,8 @@
 	<style>
 		.all {
   			background-color: lightblue;
+			width: 20%;
+			text-align: center;
 			border: 5px outset lightblue;
 		}
 	</style>
@@ -77,35 +79,60 @@
 			width: 100%;
 			text-align: center; 
 		}
-		#en{
-			width: 50%;
+		.en{
+			width: 99%;
 			text-align: center;
+			border: 5px outset lightblue;
+			background-color: lightblue;
 		}
 	</style>
-<div class='all'>
+	<style>
+		.Head {
+			width:99%;
+			text-align: center;
+			border: 5px outset lightblue;
+			background-color: lightblue;
+		}
+	</style>
+	<style>
+		.Body {
+			width: 100%;
+			height: 100px;
+			text-align: center;
+
+		}
+		.Boy {
+			text-align: right
+		}
+	</style>
 </head>
 <body onload='onload();' background-color='lightblue'>
-	<form action="juego.html">
-	<div class='disi'>
+	<form action="index.html">
+	<div class='Head'>
+	<h1>Crono</h1>
+	</div>
+	<div class='Body'>
+		<br><br><br>
 		<button type='button' onclick='h()'>Click To Start</button>
 		<button type='button' onclick='dis2()' id='h2'>Start</button>
 	<script>	
 	</script>
 	<p id="h">Waiting for Click</p>
 	<h3 id="showDate">00:00</h3>
+	</div>
+	<div class='all'>
 		<p>Speed :</p>
 		<input id='inputUser' type='text' value='1'/><br><br><br>
 	<button type='Submit'>Restart</button>
-	</div>
-	<br><br><br><br><br><br>
+	<br><br><br>
 	<div class='disi2'>
 	<h1 id='date2'></h1>
 	</div>
 	</form>
 	</div>
-	<div class='ai'>
+	<div class='en'>
 		<h1 id='ai' color='red'>Description</h1>
 		<h5 id='ai'>This is simple the only thing to do is click the "Click to Start" button</h5>
-		<h1 align-text="center">Enjoy</h1>
+		<h1 id='ai'>Enjoy</h1>
 </body>
 </html>
