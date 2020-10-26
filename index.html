@@ -57,16 +57,6 @@
 		setInterval(other,0)
 	</script>
 	<style>
-		.disi {    
-  			text-align: center
-		}
-	</style>
-	<style>
-		.disi2 {
-  			text-align: center
-		}
-	</style>
-	<style>
 		.all {
   			background-color: lightblue;
 			width: 20%;
@@ -89,20 +79,28 @@
 	<style>
 		.Head {
 			width:99%;
+			float: left;
 			text-align: center;
 			border: 5px outset lightblue;
 			background-color: lightblue;
 		}
 	</style>
 	<style>
-		.Body {
-			width: 100%;
-			height: 100px;
+		.column {
+			width: 20%;
+			float:left;
+			height: 60%;
 			text-align: center;
+			border: 5px outset lightblue;
+			background-color: lightblue;
 
 		}
-		.Boy {
-			text-align: right
+		.Footer {
+			width:100%;
+			text-align: center;
+			float:left;
+			background-color: lightblue;
+			
 		}
 	</style>
 </head>
@@ -111,7 +109,14 @@
 	<div class='Head'>
 	<h1>Crono</h1>
 	</div>
-	<div class='Body'>
+	<div class='column';style='width:20%;'>
+		<p>Speed :</p>
+		<input id='inputUser' type='text' value='1'/><br><br><br>
+	<button type='Submit'>Restart</button>
+	<br><br><br>
+	<h1 id='date2'></h1>
+	</div>
+<div class='column'; style="width:60%;background-color: white;">
 		<br><br><br>
 		<button type='button' onclick='h()'>Click To Start</button>
 		<button type='button' onclick='dis2()' id='h2'>Start</button>
@@ -120,19 +125,13 @@
 	<p id="h">Waiting for Click</p>
 	<h3 id="showDate">00:00</h3>
 	</div>
-	<div class='all'>
-		<p>Speed :</p>
-		<input id='inputUser' type='text' value='1'/><br><br><br>
-	<button type='Submit'>Restart</button>
-	<br><br><br>
-	<div class='disi2'>
-	<h1 id='date2'></h1>
+	<div class="column"; style="width:17.5%;">
+	</div>
+	<div class='Footer'; >
+	<h1>Description</h1>
+	<h5>The only thing you need to do is click "Click to Start" button.</h5>
+	<h1>Enjoy!</h1>
 	</div>
 	</form>
-	</div>
-	<div class='en'>
-		<h1 id='ai' color='red'>Description</h1>
-		<h5 id='ai'>This is simple the only thing to do is click the "Click to Start" button</h5>
-		<h1 id='ai'>Enjoy</h1>
 </body>
 </html>
