@@ -1,0 +1,138 @@
+<html lang="en">
+
+	
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CRONOS Display date</title>
+	<script>
+		var interval = 1000
+		var interval2 = 3
+		var counters = 0
+		var counterm = 00
+		var counter = ''
+		var counterem = ''
+		var counterem2 = ''
+		var x = true
+		var y = false
+		var iner = ''
+		var iner2 = ''
+		var iner3 = ''
+		function onload() {
+			interval2 = document.getElementById('inputUser').value;
+		}
+
+		function displayDate() {
+			if (x == true){
+				counters ++
+			}
+			if (counters >= 60 && x == true) {
+				counters = 0
+				counterm ++
+			}
+			if(counters <= 9){counterem2 = '0'+counters}
+			if(counterm <= 9){counterem = '0'+counterm}
+			if(counters >= 10){counterem2 = counters}
+			if(counterm >= 10){counterem = counterm}
+			counter = counterem+':'+counterem2
+			document.getElementById("showDate").innerHTML = counter;
+			document.getElementById("h").innerHTML = 'Button Clicked';
+			if(y==false){document.getElementById('h2').innerHTML = 'Stop';y=true}
+		}
+		function dis2() {
+			if (x==true){
+				x = false
+				document.getElementById('h2').innerHTML = 'Start'
+			}else{x=true;document.getElementById('h2').innerHTML = 'Stop'}
+		}
+		function h() {
+			interval2 = document.getElementById("inputUser").value;
+			setInterval(displayDate,(-(interval2*10)+1000)+10);
+		}
+		function other() {
+			iner2 = 'aditional information:  '+Date();
+			iner3 = iner2.substring(40,)
+			iner3 = iner3.substring(0,8) 
+			iner2 = iner3 
+			document.getElementById('date2').innerHTML = iner2;
+		}
+		setInterval(other,0)
+	</script>
+	<style>
+		.all {
+  			background-color: lightblue;
+			width: 20%;
+			text-align: center;
+			border: 5px outset lightblue;
+		}
+	</style>
+	<style>
+		#ai {
+			width: 100%;
+			text-align: center; 
+		}
+		.en{
+			width: 99%;
+			text-align: center;
+			border: 5px outset lightblue;
+			background-color: lightblue;
+		}
+	</style>
+	<style>
+		.Head {
+			width:99%;
+			float: left;
+			text-align: center;
+			border: 5px outset lightblue;
+			background-color: lightblue;
+		}
+	</style>
+	<style>
+		.column {
+			width: 20%;
+			float:left;
+			height: 60%;
+			text-align: center;
+			border: 5px outset lightblue;
+			background-color: lightblue;
+
+		}
+		.Footer {
+			width:100%;
+			text-align: center;
+			float:left;
+			background-color: lightblue;
+			
+		}
+	</style>
+</head>
+<body onload='onload();' background-color='lightblue'>
+	<form action="index.html">
+	<div class='Head'>
+	<h1>Crono</h1>
+	</div>
+	<div class='column';style='width:20%;'>
+		<p>Speed :</p>
+		<input id='inputUser' type='text' value='1'/><br><br><br>
+	<button type='Submit'>Restart</button>
+	<br><br><br>
+	<h1 id='date2'></h1>
+	</div>
+<div class='column'; style="width:60%;background-color: white;">
+		<br><br><br>
+		<button type='button' onclick='h()'>Click To Start</button>
+		<button type='button' onclick='dis2()' id='h2'>Start</button>
+	<script>	
+	</script>
+	<p id="h">Waiting for Click</p>
+	<h3 id="showDate">00:00</h3>
+	</div>
+	<div class="column"; style="max-width:17.5%;">
+	</div>
+	<div class='Footer'; >
+	<h1>Description</h1>
+	<h5>The only thing you need to do is click "Click to Start" button.</h5>
+	<h1>Enjoy!</h1>
+	</div>
+	</form>
+</body>
+</html>
